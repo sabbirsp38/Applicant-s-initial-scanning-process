@@ -3,7 +3,7 @@
 Plugin Name: Job Applicant Plugin
 Description: A plugin to collect job applicant information and assign tasks.
 Version: 1.0
-Author: Your Name
+Author: Sabbir Mahmud
 */
 
 // Enqueue Bootstrap styles and scripts from the CDN
@@ -85,7 +85,7 @@ function save_job_applicant_data() {
         $experience = sanitize_text_field($_POST['experience']);
         $assingedtask =isset($_POST['assingedtask']) ? sanitize_text_field($_POST['assingedtask']) : '';
         $taskrespond = sanitize_textarea_field($_POST['taskrespond']);
-
+        $currentDateTime = date('Y/m/d \a\t h:i a');
   
         global $wpdb;
         $table_name = $wpdb->prefix . 'job_applicants';
@@ -100,9 +100,10 @@ function save_job_applicant_data() {
                 'experience' => $experience,
                 'task' => $assingedtask,
                 'taskrespond' => $taskrespond,
+                'timeanddate' => $currentDateTime,
 
             ),
-            array('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')
+            array('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')
         );
         wp_redirect(home_url('/thank-you/')); 
         exit;
@@ -133,6 +134,7 @@ function job_applicant_create_table() {
         id mediumint(9) NOT NULL AUTO_INCREMENT,
         name varchar(255) NOT NULL,
         email varchar(255) NOT NULL,
+        timeanddate varchar(255) NOT NULL,
         team varchar(255) NOT NULL,
         department varchar(255) NOT NULL,
         otherdepartment varchar(255) NOT NULL,

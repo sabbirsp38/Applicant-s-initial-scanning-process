@@ -13,6 +13,8 @@ function view_job_applicant_responses() {
         <table class="table table-striped ">
             <thead>
                 <tr>
+                    <th>ID</th>
+                    <th>Submition Time & Date</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>View Application</th>
@@ -20,9 +22,12 @@ function view_job_applicant_responses() {
                 </tr>
             </thead>
             <tbody>
+                
                 <?php
                 foreach ($applicants as $applicant) {
                     echo '<tr>';
+                    echo '<td>' . $applicant['id'] . '</td>';
+                    echo '<td>' . $applicant['timeanddate'] . '</td>';
                     echo '<td>' . $applicant['name'] . '</td>';
                     echo '<td>' . $applicant['email'] . '</td>';
                     echo '<td><a class="btn btn-primary" href="' . esc_url(add_query_arg('contact_id', $applicant['id'], get_permalink(get_page_by_path('contact-details')))) . '">View Response</a> </td>';

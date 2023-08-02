@@ -202,7 +202,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label>Select Depertment</label>
+                            <label>Select Team</label>
                             <select name="department" id="department" class="form-control" >
                                 <option selected value="Sales">Sales</option>
                                 <option value="Project management">Project management</option>
