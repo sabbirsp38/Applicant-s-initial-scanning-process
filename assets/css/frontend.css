@@ -1,0 +1,234 @@
+/* Frontend Styles */
+.jam-form-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.jam-form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.jam-form-header h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.jam-form-header p {
+    color: #666;
+    font-size: 16px;
+}
+
+.jam-form-group {
+    margin-bottom: 25px;
+}
+
+.jam-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.jam-form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.jam-form-control:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.2);
+}
+
+.jam-form-select {
+    height: 45px;
+    background-color: #fff;
+}
+
+.jam-form-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.jam-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.jam-btn-primary {
+    background-color: #4CAF50;
+    color: #fff;
+    border: 2px solid #4CAF50;
+}
+
+.jam-btn-primary:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+}
+
+/* Conditional Department Field */
+.jam-conditional-field {
+    display: none;
+    margin-top: 15px;
+}
+
+/* Task Display */
+.jam-task-container {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+.jam-task-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.jam-task-description {
+    color: #666;
+    line-height: 1.6;
+}
+
+.jam-response-area {
+    margin-top: 20px;
+}
+
+/* Success Message */
+.jam-success-message {
+    padding: 15px;
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+    color: #3c763d;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Error Message */
+.jam-error-message {
+    padding: 15px;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    color: #a94442;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .jam-form-container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .jam-form-header h2 {
+        font-size: 24px;
+    }
+
+    .jam-btn {
+        width: 100%;
+    }
+}
+
+/* Job Listings */
+.jam-jobs-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.jam-job-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.jam-job-card:hover {
+    transform: translateY(-2px);
+}
+
+.jam-job-title {
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 15px;
+}
+
+.jam-job-description {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Application Form */
+.jam-application-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.jam-application-progress {
+    display: flex;
+    margin-bottom: 30px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.jam-step {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    color: #999;
+    position: relative;
+}
+
+.jam-step.active {
+    color: var(--jam-primary-color, #4CAF50);
+    font-weight: 500;
+}
+
+.jam-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: #eee;
+    z-index: -1;
+}
+
+.jam-step.active::after {
+    background: var(--jam-primary-color, #4CAF50);
+}
+
+.jam-form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/* Add your existing form styles here */ 
